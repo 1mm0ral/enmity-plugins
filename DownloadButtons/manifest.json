@@ -1,0 +1,11 @@
+{
+   "name": "DownloadButtons",
+   "version": "1.0.0",
+   "description": "Adds buttons to download themes and plugins from the chat.",
+   "authors": [
+      {
+         "name": "immoral",
+         "id": "997268848988397639"
+      }
+   ]
+}
