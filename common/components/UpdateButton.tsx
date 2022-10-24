@@ -13,7 +13,7 @@ export default ({ pluginUrl }: Props) => {
             trailing={FormRow.Arrow}
             onPress={() => {
                 console.log(pluginUrl);
-                installPlugin(`${pluginUrl}?${Math.floor(Math.random() * 1001)}.js`);
+                installPlugin(`${pluginUrl}`);
                 Dialog.show({
                     title: "Plugin Update",
                     body: "Updating the plugin using this button will require you to reload Discord. Would you like to reload Discord now?",

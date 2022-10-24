@@ -20,7 +20,6 @@ import manifest from "../manifest.json";
 const Patcher = create("download-buttons");
 const Opener = getByProps("openLazy");
 
-
 const DownloadButtons: plugins.Plugin = {
       ...manifest,
       patches: [],
