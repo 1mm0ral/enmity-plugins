@@ -36,12 +36,14 @@ const linkCommand: Command = {
         switch (args[0].value) {
             case "ebay":
                 getByProps("authorize", "callback").authorize("ebay").then((url) => {
-                    sendReply(message.channel.id, {embeds: [{
-                        type: 'rich',
-                        title: `Ebay`,
-                        description: `[Click to connect account](${url.body.url})`,
-                        color: "#252850"
-                    }]})
+                    sendReply(message.channel.id, {
+                        embeds: [{
+                            type: 'rich',
+                            title: `Ebay`,
+                            description: `[Click to connect account](${url.body.url})`,
+                            color: "#252850"
+                        }]
+                    })
                 })
                 break;
         }
