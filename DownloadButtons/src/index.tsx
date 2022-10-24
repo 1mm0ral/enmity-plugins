@@ -2,6 +2,7 @@
 import * as plugins from "enmity/managers/plugins";
 let installPlugin = window.enmity.plugins.installPlugin
 let installTheme = window.enmity.themer.installTheme
+import UpdateButton from "../../common/components/UpdateButton";
 import {
    getByProps
 } from "enmity/metro";
@@ -12,7 +13,8 @@ import {
    create
 } from "enmity/patcher";
 import {
-   FormRow
+   FormRow,
+   ScrollView
 } from 'enmity/components';
 import manifest from "../manifest.json";
 const Patcher = create("download-buttons");
@@ -52,6 +54,13 @@ const DownloadButtons: plugins.Plugin = {
          });
       },
    onStop() {},
+   getSettingsPanel({ settings }) {
+      return (
+         <ScrollView settings={settings}>
+            <UpdateButton pluginUrl={manifest.sourceUrl} />
+         </ScrollView>
+      );
+   },
 };
 
 plugins.registerPlugin(DownloadButtons);
