@@ -1,7 +1,7 @@
 {
    "name": "DownloadButtons",
    "version": "1.0.0",
-   "description": "Adds a button to download themes and plugins from the chat.",
+   "description": "Adds a button to download themes and plugins (Hold down on a link).",
    "authors": [
       {
          "name": "immoral",
