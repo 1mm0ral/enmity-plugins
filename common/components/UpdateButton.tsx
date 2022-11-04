@@ -19,7 +19,10 @@ export default ({ pluginUrl }: Props) => {
                     body: "Updating the plugin using this button will require you to reload Discord. Would you like to reload Discord now?",
                     confirmText: "Yep!",
                     cancelText: "Later",
-                    onConfirm: reload,
+                    onConfirm: () => {
+                        installPlugin(`${pluginUrl}`)
+                        reload()
+                    },
                 });
             }}
         />

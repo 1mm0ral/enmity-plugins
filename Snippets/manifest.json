@@ -1,0 +1,12 @@
+{
+    "name": "Snippets",
+    "version": "1.0.0",
+    "description": "Create, Delete, Edit, and Send Text Snippets using command (/snippet).",
+    "authors": [{
+        "name": "immoral",
+        "id": "997268848988397639"
+    }],
+    "release": "stable",
+    "color": "#C3B1E1",
+    "sourceUrl": "https://raw.githubusercontent.com/1mm0ral/enmity-plugins/main/dist/Snippets.js"
+}

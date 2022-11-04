@@ -1,6 +1,7 @@
-// @ts-ignore
 import * as plugins from "enmity/managers/plugins";
+// @ts-ignore
 let installPlugin = window.enmity.plugins.installPlugin
+// @ts-ignore
 let installTheme = window.enmity.themer.installTheme
 import UpdateButton from "../../common/components/UpdateButton";
 import {
@@ -24,7 +25,7 @@ const DownloadButtons: plugins.Plugin = {
       ...manifest,
       patches: [],
       onStart() {
-
+         // TODO: stop duplication of button
          Patcher.before(Opener, "openLazy", ({
             hideActionSheet
          }, [component, sheet]) => {
@@ -52,7 +53,9 @@ const DownloadButtons: plugins.Plugin = {
             }
          });
       },
-   onStop() {},
+   onStop() {
+      Patcher.unpatchAll()
+   },
    getSettingsPanel({ settings }) {
       return (
          <ScrollView settings={settings}>
