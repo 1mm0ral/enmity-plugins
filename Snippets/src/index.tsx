@@ -52,7 +52,7 @@ const Snippets: plugins.Plugin = {
             name: "snippets send",
             description: "Send a snippet to the current channel.",
             options: [{
-                type: 1,
+                type: 3,
                 name: "Snippets",
                 displayName: "Snippets",
                 description: "List of snippets to select from.",
